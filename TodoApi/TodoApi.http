@@ -1,0 +1,40 @@
+﻿@TodoApi_HostAddress = http://localhost:5091
+
+POST {{TodoApi_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":true,
+  "priority": "High"
+}
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/1
+
+###
+
+PUT {{TodoApi_HostAddress}}/todoitems/1
+Content-Type: application/json
+
+{
+  "name": "feed fish",
+  "isComplete": false,
+  "priority": "Medium"
+}
+
+###
+
+DELETE {{TodoApi_HostAddress}}/todoitems/1
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/priority/High
+
+###
+
